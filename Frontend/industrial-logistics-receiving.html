@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>WashALoad - Logistics</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class='header-mobile d-block d-lg-none' id="mobile">
+            
+        </header>
+        <!-- END HEADER MOBILE-->
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block" id="desktop">
+            
+        </aside>
+        <!-- END MENU SIDEBAR-->
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop" style="height:75px !important;">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                            </form>
+                            <div class="header-button my-5 justify-content-end">
+                                <div class="account-wrap">
+                                    <button type="button" data-toggle="modal" data-target="#btnLogoutModal" class="btn btn-danger btn-sm">
+                                        Logout &nbsp; <i class="fas fa-sign-out-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class='container'>
+                        <div>
+                            <p class="mb-2 mt-0 small ">Industrial >> Receiving</p>
+                        </div>
+                        
+                            <div class="mb-5 ">
+                                <h3 class="d-none d-sm-inline">Logistics Receiving</h3>
+                            </div>
+                        <div class='form-group'>
+                            <div class='d-flex col-12 col-lg-8'>
+                                <div class='col-5 col-sm-4'>
+                                    <label>SO Reference</label>
+                                </div>
+                                <div class='col-5 col-sm-5' >
+                                    <input type="text" class='form-control input-required' id="txtSOReference">
+                                </div>
+                                <div class="">
+                                    <button type='button' class="btn btn-primary" id="btnSearch" data-toggle="modal">
+                                        <i class="fas fa-search text-white">
+                                        </i>
+                                    </button>
+                                </div>
+                                
+                                <div class="pl-2">
+                                    <button type="button" class="btn btn-warning" id="btnQRMode" name="btnQRMode"
+                                        data-toggle="modal" data-target="#btnQRmodal"
+                                        onclick="GetCamera('selCameraList')">
+                                        <i class="fa fa-qrcode"></i>
+                                    </button>
+                                </div>
+                                
+                            </div>
+                                      <div class="col-12 col-md-9 col-lg-8 px-0 mt-0 pt-0">
+                            <div class="col-11 my-2 d-sm-flex">
+                                <div class="col-12 col-sm-5 pr-0">
+                                </div>
+                                <div class="col-12 col-sm-7 d-none" id="SOReferenceerrorMessage">
+                                    <small class="text-danger font-weight-bold">SO Reference not found !</small>
+                                </div>
+
+                            </div>
+                        </div>
+                            
+                            <div class='d-flex col-12 mt-2 col-lg-8'>
+                                <div class='col-5 col-sm-4'>
+                                    <label>For account</label>
+                                </div>
+                                <div class='col-5 col-sm-6'>
+                                    <p id="customerId" class="d-none"></p>
+                                    <p id="cellular"></p>
+                                    <p id="customerName" class="text-capitalize"></p>
+                                    <p id="customerAddress"></p>
+                                    <p id="booking_reference" class="d-none"></p>
+                                    <p id="picked_up_by" class="d-none"></p>
+                                    <p id="picked_up_datetime" class="d-none"></p>
+                                    
+                                    
+                                    
+                                </div>
+                            </div>
+                            <div class='d-flex col-12 mt-2 col-lg-8'>
+                                <div class='col-5 col-sm-4'>
+                                    <label>Weight (kg)</label>
+                                </div>
+                                <div class='col-5 col-sm-6'>
+                                    <input type="text" class=" form-control input-required amount" id="txtWeight">
+                                </div>
+                            </div>
+                            <div class='d-flex col-12 mt-2 col-lg-8'>
+                                <div class='col-5 col-sm-4'>
+                                    <label>Total bags</label>
+                                </div>
+                                <div class='col-5 col-sm-6'>
+                                    <input type="text" class="form-control input-required amount" id="txtBags">
+                                </div>
+                            </div>
+                            <!-- <div class="d-flex justify-content-end">
+                                <button id="btnAdd" class="btn btn-success col-3 col-md-2" data-toggle="modal" data-target="#btnAddNew">Add</button>
+                            </div> -->
+                            <div class="table-responsive m-b-40 ">
+                                <table id="" class="table table-data3 table-borderless m-t-20">
+                                    <thead id="tblHeader">
+                                        <tr>
+                                        
+                                            <th class="text-center w-75">Laundry items</th>
+                                            <th class="text-center w-25">Item count</th>
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblItems">
+                                        
+                                    </tbody>
+                                    
+                                </table>
+                                <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                                id="divAddLaundryItems">
+                                <span class="badge badge-pill badge-danger">Failed </span>
+                                 Please <span class="text-danger">add</span>
+                                Laundry Items
+                            </div>
+                            
+                            </div>
+                            
+
+                            
+                            
+                            <div class='text-center d-flex justify-content-start mt-2'>
+                                <button class='btn btn-success col-4    ' id="btnConfirmLogistics" data-toggle="modal" >Save Entry</button>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- END MAIN CONTENT-->
+                <!-- END PAGE CONTAINER-->
+            </div>
+
+        </div>
+    </div>
+    <!--MODALS-->
+    <div class="modal fade" id="btnAlreadyReceived" tabindex="-1" role="dialog" aria-labelledby="btnFailedModalLabel"
+        data-backdrop="static">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" hidden class="close" data-dismiss="modal" aria-label="Close"
+                            id="btnCloseAlreadyReceived">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-3 align-items-center">
+                        <div class="col-3">
+                            <i class="fas fa-times-circle fa-4x text-danger"></i>
+                        </div>
+                        <p id="" class="px-2">SO Reference already Received! <span class="text-danger" id=""></span>
+                           </p>
+                    </div>
+                    <div class=" row d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-6 mt-5">
+                            <button type="button" class="btn btn-primary col-5" id="btnOKAlreadyReceived">
+                                OK
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="btnAddNew" tabindex="-1" role="dialog" aria-labelledby="btnAddNewLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                    id="divAddNewInvalidForm">
+                    <span class="badge badge-pill badge-danger">Failed </span>
+                    &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                    check
+                    and submit again.
+                </div>
+                <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                    id="divAddNewInvalidAmount">
+                    <span class="badge badge-pill badge-danger">Failed </span>
+                    &nbsp; <br>  <span class="text-danger">Invalid amount</span> . Please
+                    check
+                    and submit again.
+                </div>
+                
+                
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    id="btnCloseAddNewModel">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-12 mx-auto my-2 d-flex">
+                        <div class="col-5 pr-0">
+                            <label for="selItem" class=" form-control-label mb-0">
+                                Item Description</label>
+                        </div>
+                        <div class="col-5">
+                                <select name="" id="selItem" class="form-control-success form-control input-required-modal">
+                                    
+                                </select>
+                        </div>
+                    
+                    </div>
+                    
+                    
+                    
+
+                    <div class="col-12 mx-auto my-2 d-flex">
+                        <div class="col-5 pr-0">
+                            <label class=" form-control-label mb-0">
+                                Item Count</label>
+                        </div>
+                        <div class="col-5">
+        
+                            <input id="txtItemCount" type="text" class="form-control-success form-control input-required-modal amount">
+                        </div>
+                    </div>
+
+                    <div class="col-12 mx-auto my-2 d-flex">
+                        <div class="col-8 pr-0">
+                            
+                        </div>
+                        <div class="col-4">
+                            <button type="button" data-toggle="modal" name="btnSubmitModal" id="btnSubmitModal" 
+                            class="btn btn-success col-12">
+                            Submit
+                        </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="modal fade" id="btnLogoutModal" tabindex="-1" role="dialog" aria-labelledby="btnLogoutModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseLogout">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex my-2">
+                    <div>
+                        <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                    </div>
+                    <p class="px-2">Are you sure you want to <span class="text-danger">logout</span> ?
+                    </p>
+                </div>
+                <div class=" row d-flex justify-content-around p-3">
+                    <button type="button" class="btn btn-danger col-4 py-2" data-toggle="modal"
+                        data-target="#btnConfirmLogout" id="btnLogoutConfirm">
+                        Yes
+                    </button>
+                    <button type="button" class="btn btn-primary col-4 py-2" id="btnLogoutCancel">
+                        No
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="btnConfirmLogout" tabindex="-1" role="dialog" aria-labelledby="btnConfirmLogoutLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseLogoutTwo">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex my-2">
+                    <div>
+                        <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                    </div>
+                    <p class="px-2">Confirm to <span class="text-danger">logout</span> ?
+                    </p>
+                </div>
+                <div class=" row d-flex justify-content-around p-3">
+                    <button type="button" class="btn btn-danger col-4 py-2" id="btnLogoutConfirmTwo">
+                        Confirm
+                    </button>
+                    <button type="button" class="btn btn-primary col-4 py-2" id="btnLogoutCancelTwo">
+                        Cancel
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="btnConfirmOneModal" tabindex="-1" role="dialog"
+aria-labelledby="btnConfirmOneModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    id="btnCloseConfirmOne">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex my-2">
+                <div>
+                    <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                </div>
+                <p class="px-2">Are you sure you want to <span id="confirmOneSeviceMethod"> </span> record ?
+                </p>
+            </div>
+            <div class=" row d-flex justify-content-around p-3">
+                <button type="button" class="btn btn-danger col-4 py-2" id="btnSubmitOne"
+                    data-target="#btnConfirm2Modal" data-toggle="modal">
+                    Yes
+                </button>
+                <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelOne">
+                    No
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="modal fade" id="btnQRmodal" tabindex="-1" role="dialog" aria-labelledby="btnQRLabel" aria-hidden="true">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnCloseQRModal">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div>
+                    <div class="col-12 px-0">
+                        <div class="col-12 my-2 d-sm-flex align-items-center">
+                            <div class="col-12 col-sm-5 pr-0">
+                                <label for="selCameraList" class=" form-control-label mb-0">
+                                    Select a Camera</label>
+                            </div>
+                            <div class="col-12 col-sm-7 pr-0">
+                                <select name="selCameraList" id="selCameraList"
+                                    class="form-control-success form-control">
+
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 px-0">
+                        <div class="col-11 my-2 d-sm-flex">
+                            <div class="col-12 col-sm-5 pr-0">
+                                <button id="openCamera" class="btn btn-primary">Open Camera</button>
+                            </div>
+                            <div class="col-12 col-sm-5 pr-0">
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div id="divReader" class="col-12 px-1 mx-auto"></div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!--Confirm 2-->
+<div class="modal fade" id="btnConfirm2Modal" tabindex="-1" role="dialog"
+aria-labelledby="btnConfirm2ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    id="btnCloseConfimrTwo">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex my-2">
+                <div>
+                    <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                </div>
+                <p class="px-2">Confirm to <span id="confirmServiceMethod"></span> record ?</p>
+            </div>
+            <div class=" row d-flex justify-content-around p-3">
+                <button type="button" class="btn btn-danger col-4 py-2" id="btnConfirmTwo"
+                    data-toggle="modal">
+                    Confirm
+                </button>
+                <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelTwo">
+                    Cancel
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--SUCCESS-->
+<div class="modal fade" id="btnSuccessEntryModal" tabindex="-1" role="dialog"
+aria-labelledby="btnSuccessEntryModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+   <div class="modal-content">
+       <div class="modal-body">
+           <div class="modal-header">
+               <button type="button" class="close" hidden data-dismiss="modal" aria-label="Close"
+                   id="btnCloseSuccessAlert">
+                   <span aria-hidden="true">×</span>
+               </button>
+           </div>
+           <div class="d-flex my-3 align-items-center">
+               <div class="col-3">
+                   <i class="fas fa-check-circle fa-4x text-success"></i>
+               </div>
+               <p id="successMessage" class="px-2">Entry has been <span id="successServiceMethod"
+                       class="text-success"></span>
+                   successfully</span></p>
+           </div>
+           <div class=" row d-flex justify-content-between text-right p-3">
+               <div>
+
+               </div>
+               <div class="col-6 mt-2">
+                   <button type="button" class="btn btn-primary col-5" id="btnCloseSuccessEntry">
+                       OK
+                   </button>
+               </div>
+           </div>
+       </div>
+   </div>
+</div>
+</div>
+<!--FAILED-->
+<div class="modal fade" id="btnFailedModal" tabindex="-1" role="dialog" aria-labelledby="btnFailedModalLabel"
+    data-backdrop="static">
+    <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="modal-header">
+                    <button type="button" hidden class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnCloseFailedEntry">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="d-flex my-3 align-items-center">
+                    <div class="col-3">
+                        <i class="fas fa-times-circle fa-4x text-danger"></i>
+                    </div>
+                    <p id="failedMessage" class="px-2">Failed to <span class="text-danger" id="failedMethod"></span>
+                        record. Please
+                        contact
+                        administrator</p>
+                </div>
+                <div class=" row d-flex justify-content-between text-right p-3">
+                    <div>
+
+                    </div>
+                    <div class="col-6 mt-5">
+                        <button type="button" class="btn btn-primary col-5" id="btnCloseFailedAlert">
+                            OK
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END OF MODALS-->
+    <script src="js/master-utility.js"></script>
+    <script src="js/header.js"></script>
+    <!--BOOTSTRAP JS FILES -->
+    <script src="js/qr/html5-qrcode.min.js"></script>
+    <script src="js/qr/qr.js"></script>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/moment.js"></script>
+    
+    <script src="js/logistics/industrial-logistics-receiving.js"></script>
+    <script src="js/admin/user-profle.js"></script>
+    <script src="js/logout.js"></script>
+    
+    <!--END OF BOOTSTRAP JS FILES -->
+</body>
+
+</html>
+<!-- end document-->

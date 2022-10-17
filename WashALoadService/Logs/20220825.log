@@ -1,0 +1,9 @@
+Date Time:25/08/2022 12:00:00 am
+Log:System.ObjectDisposedException: Cannot access a disposed object.
+Object name: 'MySqlConnection'.
+   at MySqlConnector.MySqlConnection.VerifyNotDisposed() in /_/src/MySqlConnector/MySqlConnection.cs:line 974
+   at MySqlConnector.MySqlConnection.get_Session() in /_/src/MySqlConnector/MySqlConnection.cs:line 730
+   at MySqlConnector.Core.ICancellableCommandExtensions.ResetCommandTimeout(ICancellableCommand command) in /_/src/MySqlConnector/Core/ICancellableCommand.cs:line 79
+   at MySqlConnector.MySqlCommand.ExecuteReaderAsync(CommandBehavior behavior, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 331
+   at WashALoadService.Methods.PickupIndustrialMethods.GetPickUpBySOReference(Int32 soReference) in C:\001 Projects\WashALoad Laundry system\Codes\WashALoadService\Methods\PickupIndustrialMethods.cs:line 226
+

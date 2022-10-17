@@ -1,0 +1,20 @@
+Date Time:2022-07-12 12:00:00 am
+Log:System.FormatException: The string 'undefined' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at WashALoadService.Controllers.BillingMethodsController.GetUnBilledInvoicesByDate(String dateFrom, String dateTo, Int32 customerID, String type, String UserKey) in C:\001 Projects\WashALoad Laundry system\Codes\WashALoadService\Controllers\BillingMethodsController.cs:line 164
+
+Date Time:2022-07-12 12:00:00 am
+Log:System.NullReferenceException: Object reference not set to an instance of an object.
+   at WashALoadService.Methods.BillingMethods.GenerateBillingReport(String dateFrom, String dateTo, Int32 customerID, String type) in C:\001 Projects\WashALoad Laundry system\Codes\WashALoadService\Methods\BillingMethods.cs:line 36
+
+Date Time:2022-07-12 12:00:00 am
+Log:System.NullReferenceException: Object reference not set to an instance of an object.
+   at WashALoadService.Methods.BillingMethods.GenerateBillingReport(String dateFrom, String dateTo, Int32 customerID, String type) in C:\001 Projects\WashALoad Laundry system\Codes\WashALoadService\Methods\BillingMethods.cs:line 36
+
+Date Time:2022-07-12 12:00:00 am
+Log:System.FormatException: The string 'undefined' was not recognized as a valid DateTime. There is an unknown word starting at index '0'.
+   at System.DateTimeParse.Parse(ReadOnlySpan`1 s, DateTimeFormatInfo dtfi, DateTimeStyles styles)
+   at System.Convert.ToDateTime(String value)
+   at WashALoadService.Controllers.BillingMethodsController.GetUnBilledInvoicesByDate(String dateFrom, String dateTo, Int32 customerID, String type, String UserKey) in C:\001 Projects\WashALoad Laundry system\Codes\WashALoadService\Controllers\BillingMethodsController.cs:line 164
+

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>WashALoad - Billing Generation</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class='header-mobile d-block d-lg-none' id="mobile">
+            
+        </header>
+        <!-- END HEADER MOBILE-->
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block" id="desktop">
+            
+        </aside>
+        <!-- END MENU SIDEBAR-->
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop" style="height:75px !important;">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                            </form>
+                            <div class="header-button my-5 justify-content-end">
+                                <div class="account-wrap">
+                                    <button type="button" data-toggle="modal" data-target="#btnLogoutModal" class="btn btn-danger btn-sm">
+                                        Logout &nbsp; <i class="fas fa-sign-out-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class='container'>
+                        <div class='form-group'>
+                            
+                            <div class="d-flex col-12 pl-0">
+                                <div class="col-3 d-none d-md-flex">
+                                    <label for="">Billing generation</label>
+                                </div>
+                                <div class="col-8 d-block d-sm-flex col-sm-12 col-md-8 justify-content-between">
+                                    <div>
+                                        <input type="radio" name="billingType" id="radioAll" checked >
+                                        <label for="radioAll">All types</label>
+                                    </div>
+                                    <div>
+                                        <input type="radio" name="billingType" id="radioIndustrial">
+                                        <label for="radioIndustrial">Industrial type</label>
+                                    </div>
+                                    
+                                    <div>
+                                        <input type="radio" name="billingType" id="radioNonIndustrial">
+                                        <label for="radioNonIndustrial">Non-Industrial type</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="" >
+                                <!-- <div class="col-12">
+                                    <label for="">Invoice Period</label>
+                                </div> -->
+                                <div class="col-10 justify-content-between col-sm-7 col-md-6 col-lg-5 pl-0">
+                                    <div class="d-flex mt-2 col-12 justify-content-between">
+                                        <label for="">From</label>
+                                        <div>
+                                            <input type="date" id="dateFrom" class="form-control form-control-sm ml-1">
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-2 col-12 justify-content-between ">
+                                        <label for="">To</label>
+                                        <div>
+                                            <input type="date" id="dateTo" class="form-control form-control-sm ml-1">
+                                        </div>                                
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="d-flex-justify-content-start mt-3">
+                                <button class="btn btn-primary" id="btnFetch">
+                                    Fetch clients with un-billed invoices
+                                </button>
+                            </div>
+                            <div class="table-responsive">
+                                <table id="" class="table table-data3 table-borderless m-t-20">
+                                    <thead id="tblHeader">
+                                        <tr class="">
+                                            <th class="border">Clients</th>
+                                            <th class="border">Type</th>
+                                            <th class="border">Invoices</th>
+                                            <th class="border text-center">Total amount</th>
+                                            <!-- <th class="border"></th> -->
+                                            
+                                            
+
+
+                                           
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblBilling">
+                                        
+                                    </tbody>
+                                </table>
+
+                                <div class="col-12 d-flex justify-content-center" >
+                                        <label class="font-italic" id="emptyDiv">No data Found</label>
+                                </div>
+                            </div>
+                            <div class="d-flex justify-content-end col-12 mt-2">
+                                <button class="btn btn-primary" id="btnGenerateBill" data-toggle="modal"> Generate Bills</button>
+                            </div>
+
+                            
+
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- END MAIN CONTENT-->
+                <!-- END PAGE CONTAINER-->
+            </div>
+
+        </div>
+    </div>
+    <!--MODALS-->
+    
+<div class="modal fade" id="btnConfirmOneModal" tabindex="-1" role="dialog"
+aria-labelledby="btnConfirmOneModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+<div class="modal-content">
+    <div class="modal-body">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                id="btnCloseConfirmOne">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="d-flex my-2">
+            <div>
+                <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+            </div>
+            <p class="px-2">Are you sure you want to <span id="confirmOneSeviceMethod"> </span> record ?
+            </p>
+        </div>
+        <div class=" row d-flex justify-content-around p-3">
+            <button type="button" class="btn btn-danger col-4 py-2" id="btnSubmitOne"
+                data-target="#btnConfirm2Modal" data-toggle="modal">
+                Yes
+            </button>
+            <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelOne">
+                No
+            </button>
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+<!--SUCCESS-->
+<div class="modal fade" id="btnSuccessEntryModal" tabindex="-1" role="dialog"
+aria-labelledby="btnSuccessEntryModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-header">
+                <button type="button" class="close" hidden data-dismiss="modal" aria-label="Close"
+                    id="btnCloseSuccessAlert">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex my-3 align-items-center">
+                <div class="col-3">
+                    <i class="fas fa-check-circle fa-4x text-success"></i>
+                </div>
+                <p id="successMessage" class="px-2">Entry has been <span id="successServiceMethod"
+                        class="text-success"></span>
+                    successfully</span></p>
+            </div>
+            <div class=" row d-flex justify-content-between text-right p-3">
+                <div>
+
+                </div>
+                <div class="col-6 mt-2">
+                    <button type="button" class="btn btn-primary col-5" id="btnCloseSuccessEntry">
+                        OK
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--Confirm 2-->
+<div class="modal fade" id="btnConfirm2Modal" tabindex="-1" role="dialog"
+aria-labelledby="btnConfirm2ModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+<div class="modal-content">
+    <div class="modal-body">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                id="btnCloseConfimrTwo">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="d-flex my-2">
+            <div>
+                <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+            </div>
+            <p class="px-2">Confirm to <span id="confirmServiceMethod"></span> record ?</p>
+        </div>
+        <div class=" row d-flex justify-content-around p-3">
+            <button type="button" class="btn btn-danger col-4 py-2" id="btnConfirmTwo"
+                data-toggle="modal">
+                Confirm
+            </button>
+            <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelTwo">
+                Cancel
+            </button>
+        </div>
+
+    </div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="btnFailedModal" tabindex="-1" role="dialog" aria-labelledby="btnFailedModalLabel"
+data-backdrop="static">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-header">
+                <button type="button" hidden class="close" data-dismiss="modal" aria-label="Close"
+                    id="btnCloseFailedEntry">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex my-3 align-items-center">
+                <div class="col-3">
+                    <i class="fas fa-times-circle fa-4x text-danger"></i>
+                </div>
+                <p id="failedMessage" class="px-2">Failed to <span class="text-danger" id="failedMethod"></span>
+                    record. Please
+                    contact
+                    administrator</p>
+            </div>
+            <div class=" row d-flex justify-content-between text-right p-3">
+                <div>
+
+                </div>
+                <div class="col-6 mt-5">
+                    <button type="button" class="btn btn-primary col-5" id="btnCloseFailedAlert">
+                        OK
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+    <div class="modal fade" id="btnGenerateBill" tabindex="-1" role="dialog" aria-labelledby="btnGenerateBillLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divAddNewInvalidForm">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                        check
+                        and submit again.
+                    </div>
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divAddNewInvalidAmount">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br>  <span class="text-danger">Invalid amount</span> . Please
+                        check
+                        and submit again.
+                    </div>
+                    
+                    
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnCloseAddNewModel">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div>
+                            <strong>Generated billing report</strong>
+                        </div>
+
+                        <div class="d-flex col-12 pl-0 mt-4">
+                            <div class="col-3 d-none d-md-flex">
+                                <label for="">For client type</label>
+                            </div>
+                            <div class="col-8 d-block d-sm-flex col-sm-12 col-md-8 justify-content-between">
+                                <div>
+                                    <input type="radio" checked name="clientType" id="allType">
+                                    <label for="allType">All types</label>
+                                </div>
+                                <div>
+                                    <input type="radio" name="clientType" id="industrialType">
+                                    <label for="industrialType">Industrial type</label>
+                                </div>
+                                
+                                <div >
+                                    <input type="radio" name="clientType" id="nonIndustrialType">
+                                    <label for="nonIndustrialType">Non-Industrial type</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex mt-2">
+                            <div class="col-3">
+                                <label for="">Billing dates</label>
+                            </div>
+                            <div class="col-9 d-flex">
+                                <div class="d-flex">
+                                    <label for="">From</label>
+                                    <div>
+                                        <input type="date" id="dateFromModal" class="form-control form-control-sm ml-1">
+                                    </div>
+                                </div>
+                                <div class="d-flex ml-2">
+                                    <label for="">To</label>
+                                    <div>
+                                        <input type="date" id="dateToModal" class="form-control form-control-sm ml-1">
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="d-flex col-12 justify-content-end p-0">
+                            <div class="d-flex justify-content-start col-7 col-sm-4 col-md-3 mt-4 p-0">
+                                <div class="col-6">
+                                    <i class="fas fa-print fa-lg text-primary" ></i>
+                                    <label for="">Print</label>
+    
+                                </div>
+                                <div class="col-6" style="cursor: pointer;" data-toggle="modal" data-target="#btnFileType">
+                                    <i class="fas fa-save fa-lg text-success" ></i>
+                                    <label for="">Save</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive m-b-40 ">
+                            <table id="" class="table table-data3 table-borderless m-t-20">
+                                <thead id="tblHeader">
+                                    <tr>
+                                        <th class="border">Clients</th>
+                                        <th class="border ">Type</th>
+                                        <th class="border">Billing Reference</th>
+                                        <th class="border ">Billing date</th>
+                                        <th class="border ">Billing amount</th>
+                                        <th class="border ">Paid</th>
+                                        
+
+
+                                       
+                                    </tr>
+                                </thead>
+                                <tbody id="">
+                                    <tr>
+                                    <td>XYZ</td>
+                                    <td>Industrial</td>
+                                    <td>015110</td>
+                                    <td>Nov 10, 2021</td>
+                                    <td>15,0000</td>
+                                    <td><i class="fas fa-check fa-sm text-success"></i></td>
+
+                                    </tr>
+                                </tbody>
+                            </table>
+                        
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnLogoutModal" tabindex="-1" role="dialog" aria-labelledby="btnLogoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close d-none" data-dismiss="modal" aria-label="Close"
+                        id="btnCloseLogout">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">Are you sure you want to <span class="text-danger">logout</span> ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnLogoutConfirm">
+                            Yes
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnLogoutCancel">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="modal fade" id="btnConfirm" tabindex="-1" role="dialog" aria-labelledby="btnLogoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close d-none" data-dismiss="modal" aria-label="Close"
+                        id="btnCloseConfirm">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">Are you sure you want to <span class="text-success" id="method">add</span> ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnConfirmSubmit">
+                            Yes
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnConfirmCancel">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnFileType" tabindex="-1" role="dialog" aria-labelledby="btnFileType"
+            aria-hidden="true">
+            <div class="modal-dialog modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none"
+                            id="divAddNewInvalidForm">
+                            <span class="badge badge-pill badge-danger">Failed </span>
+                            &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                            check
+                            and submit again.
+                        </div>
+                        
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            id="btnCloseAddNewModel">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body mb-3">
+                        <div class="row">
+                            
+                        <div class="d-flex justify-content-between col-12">
+                            <div class='col-6 px-0 text-center'>
+                                <button  class="btn btn-danger" id='pdfile'>PDF file</button>
+                            </div>
+                            <div class='col-6 px-0 text-center'>
+                                <button  class="btn btn-primary" id='xlsfile'>XLS file</button>
+                            </div>
+                        </div>
+     
+                       
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <!--END OF MODALS-->
+
+    
+    <!--BOOTSTRAP JS FILES -->
+    <script src="js/master-utility.js"></script>
+        <script src="js/header.js"></script>
+    <!-- Jquery JS-->
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script src="js/logistics/billing-generation-logistics.js"></script>
+    
+
+    
+
+    <!--END OF BOOTSTRAP JS FILES -->
+</body>
+
+</html>
+<!-- end document-->

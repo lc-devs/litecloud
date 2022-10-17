@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>WashALoad - User Management</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+<style>
+    td{
+        cursor: default !important;
+    }
+</style>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class='header-mobile d-block d-lg-none' id="mobile">            
+        </header>
+        <!-- END HEADER MOBILE-->
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block min-vh-100" id="desktop">
+        </aside>
+        <!--<aside class="menu-sidebar d-none d-lg-block min-vh-100" id="desktop">
+            <div class='logo'>
+                <a href='#'><img src='images/icon/logo.png' alt='Cool Admin' /></a>
+            </div>
+            <div class="col-12 px-0">
+                <div class="card">
+
+                    <div class="card-body" id="userDetails">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class='menu-sidebar__content js-scrollbar'>
+                <nav class='navbar-sidebar pt-0'>
+                    <ul class='list-unstyled navbar__list'>
+                        <li class="active">
+                            <a href='admin-user-management.html'><i class='fas fa-user-md'></i>User Management</a>
+                        </li>
+                        <li>
+                            <a href='admin-user-access-management.html'>
+                                <i class='fas  fa-shield-alt'></i>User Access Management
+                            </a>
+                        </li>
+                        <li>
+                            <a href='admin-site-management.html'>
+                                <i class='fas fa-sitemap'></i>Site Management
+                            </a>
+                        </li>
+                        <li>
+                            <a href='admin-payment-method.html'>
+                                <i class='fas fa-rouble'></i>Payment Method
+                            </a>
+                        </li>
+                        <li class='has-sub'>
+                            <a class='js-arrow' href='#'>
+                                <i class='fas fa-caret-right'></i>Product Definition
+                            </a>
+                            <ul class='list-unstyled navbar__sub-list js-sub-list'>
+                                <li>
+                                    <a href='admin-product-definition-industrial.html'>
+                                        <i class='fas fa-group'></i>Industrial
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href='admin-product-definition-non-industrial.html'>
+                                        <i class='fas fa-user'></i>Non
+                                        Industrial
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href='admin-customer-info-tagging.html'>
+                                <i class='fas fa-tags'></i>Customer Management
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>-->
+        <!-- END MENU SIDEBAR-->
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop" style="height:75px !important;">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                            </form>
+                            <div class="header-button my-5 justify-content-end">
+                                <div class="account-wrap">
+                                    <button type="button" data-toggle="modal" data-target="#btnLogoutModal"
+                                            class="btn btn-danger btn-sm">
+                                        Logout &nbsp; <i class="fas fa-sign-out-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <p class="mb-3 mt-0 small ">User Management >> User List</p>
+                        <div class="header">
+                            <div>
+                                <h3 class="d-none d-sm-inline">User Management</h3>
+                            </div>
+
+
+                            <div class="text-center">
+                                <div class="spinner-border" role="status">
+                                    <span class="sr-only">Loading...</span>
+                                </div>
+                            </div>
+                            <div class="col-12 d-sm-flex justify-content-between px-0 py-2 m-t-20">
+                                <div class="col-12 col-sm-8 col-md-6 pl-0 d-flex justify-content-between mt-4">
+
+                                </div>
+                                </button>
+                                <div class="col-12 col-sm-4 col-md-3 mt-4 d-flex justify-content-end pr-0">
+                                    <button type="button" data-toggle="modal" data-target="#btnAddNew"
+                                            class="btn btn-success col-3 col-sm-12" id="btnAddNewUser">
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive m-b-40 my-2">
+                            <table id="tblSearch" class="table table-borderless table-striped table-earning">
+                                <thead>
+                                    <tr>
+                                        <th class="border border-top-0 border-bottom-0 px-lg-4">User ID</th>
+                                        <th class="border border-top-0 border-bottom-0 px-lg-4 text-center">
+                                            Username
+                                        </th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0 px-lg-2 text-center">
+                                            Admin
+                                        </th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0 px-lg-3 text-center">
+                                            Section
+                                        </th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0 px-lg-3 text-center">
+                                            Site
+                                        </th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0 px-2 text-center">
+                                            Reset
+                                        </th>
+                                        <th class="border border-top-0 border-bottom-0 px-2 text-center">
+                                            Status
+                                        </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblBody">
+                                </tbody>
+                            </table>
+                            <div class="col-12 my-4">
+                                <p class="font-italic text-center d-none" id="emptyTable">No Record Found</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- END MAIN CONTENT-->
+                <!-- END PAGE CONTAINER-->
+            </div>
+
+        </div>
+    </div>
+
+    <!--MODALS-->
+    <div class="modal fade" id="btnAddNew" tabindex="-1" role="dialog" aria-labelledby="btnAddNewLabel"
+         aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                         id="divAddNewInvalidForm">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                        check
+                        and submit again.
+                    </div>
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                         id="divPasswordNotMatch">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br>Password didn't match. Please check and try again.
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            id="btnCloseAddNewModel">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="newUserForm">
+                        <div class="row">
+                            <div class="col-12 mx-auto d-sm-flex mt-2">
+                                <div class="col-12 col-sm-8 d-flex pl-0">
+                                    <div class="col-5 pr-0">
+                                        <label for="txtUserID" class=" form-control-label mb-0">
+                                            User ID
+                                        </label>
+                                    </div>
+                                    <div class="col-7">
+                                        <input type="text" id="txtUserID" name="txtUserID"
+                                               class="form-control-success mx-sm-3 form-control input-required" required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 my-1 text-align-end">
+                                    <input type="checkbox" name="chkAccounting" id="chkAccounting">
+                                    <label for="chkAccounting" class="mb-0"> Accounting</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-3 pr-0">
+                                    <label for="txtUsername" class=" form-control-label mb-0">
+                                        Username
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" id="txtUsername" name="txtUsername"
+                                           class="form-control-success form-control input-required" required>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-3 pr-0">
+                                    <label for="txtPassword1" class=" form-control-label mb-0">
+                                        Password
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="password" id="txtPassword1" name="txtPassword1"
+                                           class="form-control-success form-control input-required" required>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-3 pr-0">
+                                    <label for="txtPassword2" class=" form-control-label mb-0">
+                                        Re Enter Password
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="password" id="txtPassword2" name="txtPassword2"
+                                           class="form-control-success form-control input-required" required>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto d-flex py-1">
+                                <div class="col-3 pr-0">
+                                    <label class=" form-control-label mb-0">
+                                        User Type
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <div class=" d-flex" id="divUserType">
+                                        <div>
+                                            <input type="radio" name="chkUserType" id="chkAdmin" value="1" required>
+                                            <label for="chkAdmin">Admin</label>
+                                        </div>
+                                        <div class="pl-3">
+                                            <input type="radio" name="chkUserType" id="chkNonAdmin" value="4">
+                                            <label for="chkNonAdmin">Non-Admin</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto d-flex">
+                                <div class="col-3 pr-0 userSection">
+                                    <label class=" form-control-label mb-0">
+                                        Section
+                                    </label>
+                                </div>
+                                <div class="col-9 userSection">
+                                    <div class=" d-flex">
+                                        <div>
+                                            <input type="radio" name="chkSection" id="chkLogistics" value="1">
+                                            <label for="chkLogistics">Logistics</label>
+                                        </div>
+                                        <div class="pl-3">
+                                            <input type="radio" name="chkSection" id="chkLaundry" value="2">
+                                            <label for="chkLaundry">Laundry</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-7 pr-0 userAccountTemplate">
+                                    <label class=" form-control-label mb-0">
+                                        User Access Menu Template
+                                    </label>
+                                </div>
+                                <div class="col-5 userAccountTemplate">
+                                    <select id="selUserAccessTemplate" name="selUserAccessTemplate"
+                                            class="form-control-success form-control">
+                                        <option value="" hidden>Select</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-7 pr-0 userSite">
+                                    <label class=" form-control-label mb-0">
+                                        Site Location
+                                    </label>
+                                </div>
+                                <div class="col-5 userSite">
+                                    <select id="selSiteLocation" name="selSiteLocation"
+                                            class="form-control-success form-control " required>
+                                        <option value="" hidden>Select</option>
+
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-8 pr-0">
+
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" data-toggle="modal" name="btnSubmitNew" id="btnSubmitNew"
+                                            class="btn btn-success col-12">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--UPDATE USER-->
+    <div class="modal fade" id="btnUpdateUser" tabindex="-1" role="dialog" aria-labelledby="btnUpdateUserLabel"
+         aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                         id="divUpdateInvalidForm">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                        check
+                        and submit again.
+                    </div>
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                         id="divUpdatePasswordNotMatch">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br>Password didn't match. Please check and try again.
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            id="btnCloseUpdateModel">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="updateUserForm">
+                        <div class="row">
+                            <div class="col-12 mx-auto d-sm-flex mt-2">
+                                <div class="col-12 col-sm-8 d-flex pl-0">
+                                    <div class="col-5 pr-0">
+                                        <label for="txtEditUserID" class=" form-control-label mb-0">
+                                            User ID
+                                        </label>
+                                    </div>
+                                    <div class="col-7">
+                                        <input type="text" id="txtEditUserID" name="txtEditUserID"
+                                               class="form-control-success mx-sm-3 form-control update-input-required" readonly required>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-4 my-1 text-align-end">
+                                    <input type="checkbox" name="chkEditAccounting" id="chkEditAccounting">
+                                    <label for="chkEditAccounting" class="mb-0"> Accounting</label>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-3 pr-0">
+                                    <label for="txtEditUsername" class=" form-control-label mb-0">
+                                        Username
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="text" id="txtEditUsername" name="txtEditUsername"
+                                           class="form-control-success form-control update-input-required" required>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <!-- <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-3 pr-0">
+                                    <label for="txtEditPassword1" class=" form-control-label mb-0">
+                                        Password</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="password" id="txtEditPassword1" name="txtEditPassword1"
+                                        class="form-control-success form-control update-input-required" required>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-3 pr-0">
+                                    <label for="txtEditPassword2" class=" form-control-label mb-0">
+                                        Re Enter Password</label>
+                                </div>
+                                <div class="col-8">
+                                    <input type="password" id="txtEditPassword2" name="txtEditPassword2"
+                                        class="form-control-success form-control update-input-required" required>
+                                </div>
+                                <div>
+                                </div>
+                            </div> -->
+                            <div class="col-12 mx-auto d-flex py-1">
+                                <div class="col-3 pr-0">
+                                    <label class=" form-control-label mb-0">
+                                        User Type
+                                    </label>
+                                </div>
+                                <div class="col-8">
+                                    <div class=" d-flex" id="divUserType">
+                                        <div>
+                                            <input type="radio" name="chkUserType" id="chkEditAdmin" value="1" required>
+                                            <label for="chkEditAdmin">Admin</label>
+                                        </div>
+                                        <div class="pl-3">
+                                            <input type="radio" name="chkUserType" id="chkEditNonAdmin" value="4">
+                                            <label for="chkEditNonAdmin">Non-Admin</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto d-flex">
+                                <div class="col-3 pr-0 updateUserSectionList">
+                                    <label class=" form-control-label mb-0">
+                                        Section
+                                    </label>
+                                </div>
+                                <div class="col-9 updateUserSectionList">
+                                    <div class=" d-flex">
+                                        <div>
+                                            <input type="radio" name="chkSection" id="chkEditLogistics" value="1">
+                                            <label for="chkEditLogistics">Logistics</label>
+                                        </div>
+                                        <div class="pl-3">
+                                            <input type="radio" name="chkSection" id="chkEditLaundry" value="2">
+                                            <label for="chkEditLaundry">Laundry</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-7 pr-0 userEditAccountTemplate">
+                                    <label for="selEditUserAccessTemplate" class=" form-control-label mb-0">
+                                        User Access Menu Template
+                                    </label>
+                                </div>
+                                <div class="col-5 userEditAccountTemplate">
+                                    <select id="selEditUserAccessTemplate" name="selEditUserAccessTemplate"
+                                            class="form-control-success form-control">
+                                        <option value="" hidden>Select</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-7 pr-0 userEditSite">
+                                    <label class=" form-control-label mb-0">
+                                        Site Location
+                                    </label>
+                                </div>
+                                <div class="col-5 userEditSite">
+                                    <select id="selEditSiteLocation" name="selEditSiteLocation"
+                                            class="form-control-success form-control ">
+                                        <option value="" hidden>Select</option>
+
+
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-8 pr-0">
+
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" data-toggle="modal" name="btnSubmitUpdate" id="btnSubmitUpdate"
+                                            class="btn btn-success col-12">
+                                        Update
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CHANGE PASSWORD-->
+    <div class="modal fade" id="btnUpdatePassword" tabindex="-1" role="dialog"
+         aria-labelledby="btnUpdatePasswordLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                             id="divInvalidPasswordForm">
+                            <span class="badge badge-pill badge-danger">Failed </span>
+                            &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                            check
+                            and submit again.
+                        </div>
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                             id="divChangePasswordNotMatch">
+                            <span class="badge badge-pill badge-danger">Failed </span>
+                            &nbsp; <br>Password didn't match. Please check and try again.
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                id="btnClosePassword">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <input type="hidden" name="userId" id="userId">
+                    <div class="col-12 mx-auto my-2">
+                        <div class="col-12 pr-0">
+                            <label for="txtChangePassword1" class=" form-control-label mb-0">
+                                Password
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <input type="password" id="txtChangePassword1" name="txtChangePassword1"
+                                   class="form-control-success form-control password-required" required>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-auto my-2">
+                        <div class="col-12 pr-0">
+                            <label for="txtChangePassword2" class=" form-control-label mb-0">
+                                Re enter password
+                            </label>
+                        </div>
+                        <div class="col-12">
+                            <input type="password" id="txtChangePassword2" name="txtChangePassword2"
+                                   class="form-control-success form-control password-required" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-8 mt-2">
+                            <button type="button" class="btn btn-primary col-5" data-toggle="modal" id="btnSubmitUpdatedPassword">
+                                Update
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnLogoutModal" tabindex="-1" role="dialog" aria-labelledby="btnLogoutModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseLogout">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">
+                            Are you sure you want to <span class="text-danger">logout</span> ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" data-toggle="modal"
+                                data-target="#btnConfirmLogout" id="btnLogoutConfirm">
+                            Yes
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnLogoutCancel">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="btnConfirmLogout" tabindex="-1" role="dialog" aria-labelledby="btnConfirmLogoutLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseLogoutTwo">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">
+                            Confirm to <span class="text-danger">logout</span> ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnLogoutConfirmTwo">
+                            Confirm
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnLogoutCancelTwo">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CONFIRM 1-->
+    <div class="modal fade" id="btnConfirm1" tabindex="-1" role="dialog" aria-labelledby="btnConfirm1Label"
+         aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseConfirm1">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">
+                            Are you sure you want to <span class="text-success" id="method"></span> user ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnConfirmSuccessOne"
+                                data-toggle="modal" data-target="#btnConfirm2Modal">
+                            Yes
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelOne">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Confirm 2-->
+    <div class="modal fade" id="btnConfirm2Modal" tabindex="-1" role="dialog" aria-labelledby="btnConfirm2ModalLabel"
+         aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                                id="btnCloseConfimrTwo">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">Confirm to <span id="confirmTwoMethod"></span> user ?</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnConfirmTwo" data-toggle="modal">
+                            Confirm
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelTwo">
+                            Cancel
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SUCCESS-->
+    <div class="modal fade" id="btnSuccessEntryModal" tabindex="-1" role="dialog"
+         aria-labelledby="btnSuccessEntryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" class="close" hidden data-dismiss="modal" aria-label="Close"
+                                id="btnCloseSuccessAlert">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-3 align-items-center">
+                        <div class="col-3">
+                            <i class="fas fa-check-circle fa-4x text-success"></i>
+                        </div>
+                        <p id="successMessage" class="px-2">
+                            User <span id="prefix"></span> has been <span id="successServiceMethod"
+                                                                          class="text-success"></span>
+                            successfully</span>
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-6 mt-2">
+                            <button type="button" class="btn btn-primary col-5" id="btnCloseSuccessEntry">
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FAILED-->
+    <div class="modal fade" id="btnFailedModal" tabindex="-1" role="dialog" aria-labelledby="btnFailedModalLabel"
+         data-backdrop="static">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" hidden class="close" data-dismiss="modal" aria-label="Close"
+                                id="btnCloseFailedEntry">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-3 align-items-center">
+                        <div class="col-3">
+                            <i class="fas fa-times-circle fa-4x text-danger"></i>
+                        </div>
+                        <p id="failedMessage" class="px-2">
+                            Failed to <span class="text-danger" id="failedMethod"></span>
+                            user. Please
+                            contact
+                            administrator
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-6 mt-5">
+                            <button type="button" class="btn btn-primary col-5" id="btnCloseFailedAlert">
+                                OK
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--END OF MODALS-->
+    <!--BOOTSTRAP JS FILES -->
+    <!-- Jquery JS-->
+    <script src="js/master-utility.js"></script>
+    <script src="js/header.js"></script>
+
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/admin/admin-user-management.js"></script>
+    <script src="js/admin/user-profle.js"></script>
+
+    <!--END OF BOOTSTRAP JS FILES -->
+</body>
+
+</html>
+<!-- end document-->

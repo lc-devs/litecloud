@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title Page-->
+    <title>WashALoad - Customer Information Tagging</title>
+
+    <!-- Fontfaces CSS-->
+    <link href="css/font-face.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-5/css/fontawesome-all.min.css" rel="stylesheet" media="all">
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+
+    <!-- Bootstrap CSS-->
+    <link href="vendor/bootstrap-4.1/bootstrap.min.css" rel="stylesheet" media="all">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/animsition/animsition.min.css" rel="stylesheet" media="all">
+    <link href="vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet" media="all">
+    <link href="vendor/wow/animate.css" rel="stylesheet" media="all">
+    <link href="vendor/css-hamburgers/hamburgers.min.css" rel="stylesheet" media="all">
+    <link href="vendor/slick/slick.css" rel="stylesheet" media="all">
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/perfect-scrollbar/perfect-scrollbar.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/theme.css" rel="stylesheet" media="all">
+
+</head>
+
+<style>
+    td {
+        cursor: default !important;
+    }
+</style>
+
+<body class="animsition">
+    <div class="page-wrapper">
+        <!-- HEADER MOBILE-->
+        <header class='header-mobile d-block d-lg-none' id="mobile">
+        </header>
+        <!-- END HEADER MOBILE-->
+        <!-- MENU SIDEBAR-->
+        <aside class="menu-sidebar d-none d-lg-block min-vh-100" id="desktop">
+        </aside>
+        <!-- END MENU SIDEBAR-->
+        <!-- PAGE CONTAINER-->
+        <div class="page-container">
+            <!-- HEADER DESKTOP-->
+            <header class="header-desktop" style="height:75px !important;">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div class="header-wrap">
+                            <form class="form-header" action="" method="POST">
+                            </form>
+                            <div class="header-button my-5 justify-content-end">
+                                <div class="account-wrap">
+                                    <button type="button" data-toggle="modal" data-target="#btnLogoutModal"
+                                        class="btn btn-danger btn-sm">
+                                        Logout &nbsp; <i class="fas fa-sign-out-alt"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER DESKTOP-->
+            <!-- MAIN CONTENT-->
+            <div class="main-content">
+                <div class="section__content section__content--p30">
+                    <div class="container-fluid">
+                        <div>
+                            <p class="mb-3 mt-0 small ">Customer Information Tagging</p>
+                        </div>
+                        <div class="header">
+                            <div>
+                                <h3 class="d-none d-sm-inline">Customer Information Tagging</h3>
+                            </div>
+                            <div class="d-md-flex justify-content-between align-items-center d-lg-block d-xl-flex">
+                                <div class="d-block d-sm-flex my-2">
+                                    <div class="d-block d-sm-flex align-items-center py-2 pl-0 col-12 col-sm-6">
+                                        <label for="selSearchParameter" class="my-0">Search by:&nbsp;</label>
+                                        <select id="selSearchParameter" name="selSearchParameter"
+                                            class="form-control-success form-control col-12 col-sm-7 col-lg-8">
+                                            <option value="c_name">Customer Name</option>
+                                            <option value="c_num">Cellular Number</option>
+                                            <option value="c_em">Email Address</option>
+                                        </select>
+                                    </div>
+                                    <div class="d-flex justify-content-between py-2 pl-0 col-12 col-sm-6">
+                                        <input id="txtSearch" name="txtSearch" type="text" class="form-control col-9"
+                                            autocomplete="off" placeholder="Search">
+                                        <button type="button" class="btn btn-primary col-2" id="btnSearch"
+                                            name="btnSearch">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-between float-right py-2 pr-0 my-2 col-md-2">
+                                    <div>
+
+                                    </div>
+                                    <button type="button" data-toggle="modal" data-target="#btnAddNew"
+                                        class="btn btn-success col-3 col-md-12" id="btnNewEntry">Add</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="table-responsive m-b-40 ">
+                            <table id="tblSearch" class="table table-borderless table-striped table-earning m-t-20">
+                                <thead>
+                                    <tr>
+                                        <th class="border border-top-0 border-bottom-0">Client</th>
+                                        <th class="border border-top-0 border-bottom-0">Cell No.</th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0">Email</th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0 px-3">Client Type
+                                        </th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0">Reset</th>
+                                        <th class="border border-top-0 border-bottom-0 border-right-0">Status</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody id="tblBody">
+
+                                </tbody>
+                            </table>
+                            <div class="col-12 my-4">
+                                <p class="font-italic text-center d-none" id="emptyTable">No Record Found</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+                <!-- END MAIN CONTENT-->
+                <!-- END PAGE CONTAINER-->
+            </div>
+
+        </div>
+    </div>
+    <!--MODALS-->
+
+    <div class="modal fade" id="btnAddNew" tabindex="-1" role="dialog" aria-labelledby="btnAddNewLabel"
+        aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divAddNewInvalidForm">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                        check
+                        and submit again.
+                    </div>
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divInvalidADL">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> Invalid <span class="text-danger">Average Daily Load (ADL)
+                        </span>value. Please check and try again
+                    </div>
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divInvalidPassword">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> Passwords din't match. Please check and try again
+                    </div>
+
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divInvalidClientType">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> Invalid <span class="text-danger">Client Type
+                        </span>. Please select check and try again
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnCloseAddNewModel">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <input type="hidden" name="customerID" , id="customerID">
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class=" col-12 col-sm-3 pr-0">
+                                <label for="txtClientName" class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Client Name</label>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-10 col-sm-10">
+                                    <input type="text" id="txtClientName" name="txtClientName"
+                                        class="form-control-success form-control client-required text-capitalize"
+                                        readonly>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" data-toggle="modal" data-target="#btnClientList"
+                                        class="btn btn-primary" id="btnSearchCustomer" name="btnSearchCustomer">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class=" col-12 col-sm-3 pr-0">
+                                <label for="txtCellularNo" class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Cellular No.</label>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-12 pr-0 mr-0">
+                                    <input type="text" id="txtCellularNo" name="txtCellularNo"
+                                        class="form-control-success form-control" readonly>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label for="txtEmail" class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Email</label>
+                            </div>
+
+                            <div class="d-flex">
+                                <div class="col-12">
+                                    <input type="text" id="txtEmail" name="txtEmail"
+                                        class="form-control-success form-control" readonly>
+                                </div>
+                            </div>
+
+                            <div>
+
+                            </div>
+                        </div>
+                        <!-- <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label for="txtPassword1" class=" form-control-label mb-0">
+                                    Password</label>
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <input type="password" id="txtPassword1" name="txtPassword1"
+                                    class="form-control-success form-control client-required">
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label for="txtPassword2" class=" form-control-label mb-0">
+                                    Confirm Password</label>
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <input type="password" id="txtPassword2" name="txtPassword2"
+                                    class="form-control-success form-control client-required">
+                            </div>
+                            <div>
+
+                            </div>
+                        </div> -->
+                        <div class="col-12">
+                            <div class="col-12 pr-0 py-2">
+                                <label class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Office/ Residential Address</label>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mx-auto mb-3 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <p id="address"></p>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label class="form-control-label mb-0" style="font-weight: bold;">
+                                    Client Type</label>
+                            </div>
+                            <div class="col-12 col-sm-9 ">
+                                <div class=" d-flex">
+                                    <div>
+                                        <input type="checkbox" name="chkUserType" id="chkIndustrial">
+                                        <label for="chkIndustrial">Industrial</label>
+                                    </div>
+                                    <div class="pl-3">
+                                        <input type="checkbox" name="chkUserType" id="chkNonIndustrial">
+                                        <label for="chkNonIndustrial">Non Industrial</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label for="txtADL" class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Average Daily Load (ADL)</label>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-12">
+                                    <input type="text" id="txtADL" name="txtADL"
+                                        class="form-control-success form-control client-required">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mx-auto d-flex">
+                            <div class="col-3 pr-0">
+                                <label class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Status</label>
+                            </div>
+                            <div class="col-9 ">
+                                <div class=" d-flex">
+                                    <div>
+                                        <input type="radio" name="chkStatus" id="chkActive">
+                                        <label for="chkActive">Active</label>
+                                    </div>
+                                    <div class="pl-3">
+                                        <input type="radio" name="chkStatus" id="chkBlocked">
+                                        <label for="chkBlocked">Blocked</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto d-none" id="divItems">
+                            <label style="font-weight: bold;">Items </label>
+                            <div class="col-12 py-2 d-flex justify-content-end pr-0">
+                                <div>
+                                    <button class="btn btn-success px-4" type="button" data-toggle="modal"
+                                        data-target="#btnItemAddModal" id="btnAddNewItems">Add</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive ">
+                                <table id="tblSearchLaundryItems" class="table table-data3 table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th class="border border-top-0 border-bottom-0">
+                                                Description</th>
+                                            <th class="border border-top-0 border-bottom-0 text-center px-1">
+                                                Manual Costing</th>
+                                            <th class="border border-top-0 border-bottom-0 text-center px-4">
+                                                Cost with ADL</th>
+                                            <th class="border border-top-0 border-bottom-0 text-center">
+                                                Cost without ADL</th>
+                                                <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblIndustrial">
+
+                                    </tbody>
+                                </table>
+                                <div class="col-12 my-4">
+                                    <p class="font-italic text-center d-none" id="emptyLaundryItems">No Record
+                                        Found</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        <div class="col-12 mx-auto my-2 d-flex">
+                            <div class="col-8 pr-0">
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" data-toggle="modal" name="btnSubmitNewClient"
+                                    id="btnSubmitNewClient" class="btn btn-success col-12">
+                                    Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--ITEMS-->
+    <div class="modal fade" id="btnItemAddModal" tabindex="-1" role="dialog" aria-labelledby="btnItemAddModalLabel"
+        aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                    id="divInvalidForm">
+                    <span class="badge badge-pill badge-danger">Failed </span>
+                    &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                    check
+                    and submit again.
+                </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnClosebtnItemAddModal">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="row">
+                            <div class="col-12 mx-auto my-2 d-sm-flex">
+                                <div class="col-3 pr-0">
+                                    <label for="selLaundryItemCategory" class=" form-control-label mb-0">
+                                        Category</label>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    <select id="selLaundryItemCategory" name="selLaundryItemCategory"
+                                        class="form-control item-required">
+
+                                    </select>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex align-items-center">
+                                <div class="col-1 pr-0">
+                                    <input type="checkbox" id="chkManualCosting" name="chkManualCosting" disabled
+                                        class="form-control-success form-control col-12">
+                                </div>
+                                <div class="col-9 px-2">
+                                    <label for="chkManualCosting" class=" form-control-label mb-0">
+                                        Manual Costing</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-7 pr-0">
+                                    <label for="txtUnitCostWithADL" class=" form-control-label mb-0">
+                                        Unit Cost with ADL</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="txtUnitCostWithADL" name="txtUnitCostWithADL"
+                                        class="form-control-success form-control amount-check item-required">
+                                </div>
+
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-7 pr-0">
+                                    <label for="txtUnitCostWithoutADL" class=" form-control-label mb-0">
+                                        Unit Cost without ADL</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="txtUnitCostWithoutADL" name="txtUnitCostWithoutADL"
+                                        class="form-control-success form-control amount-check item-required">
+                                </div>
+
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-8 pr-0">
+
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" data-toggle="modal" name="btnAddItems" id="btnAddItems"
+                                        class="btn btn-success col-12">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--UPDATE CUSTOMER-->
+    <div class="modal fade" id="btnUpdate" tabindex="-1" role="dialog" aria-labelledby="btnUpdateLabel"
+        aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divUpdateInvalidForm">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                        check
+                        and submit again.
+                    </div>
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divUpdateInvalidADL">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> Invalid <span class="text-danger">Average Daily Load (ADL)
+                        </span>value. Please check and try again
+                    </div>
+
+                    <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                        id="divUpdateInvalidClientType">
+                        <span class="badge badge-pill badge-danger">Failed </span>
+                        &nbsp; <br> Invalid <span class="text-danger">Client Type
+                        </span>. Please select check and try again
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnCloseUpdateModel">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <input type="hidden" name="editCustomerID" , id="editCustomerID">
+                        <input type="hidden" name="editCustomerSourceId" , id="editCustomerSourceId">
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class=" col-12 col-sm-3 pr-0">
+                                <label for="txtEditClientName" class=" form-control-label mb-0" style="font-weight:bold ;">
+                                    Client Name</label>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-10 col-sm-10">
+                                    <input type="text" id="txtEditClientName" name="txtEditClientName"
+                                        class="form-control-success form-control client-update-required text-capitalize"
+                                        readonly>
+                                </div>
+                                <div class="col-2">
+                                    <button type="button" data-toggle="modal" data-target="#btnClientList"
+                                        class="btn btn-primary" id="btnSearchCustomer" name="btnSearchCustomer"
+                                        disabled>
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class=" col-12 col-sm-3 pr-0">
+                                <label for="txtEditCellularNo" class=" form-control-label mb-0" style="font-weight:bold ;">
+                                    Cellular No.</label>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-12 pr-0 mr-0">
+                                    <input type="text" id="txtEditCellularNo" name="txtEditCellularNo"
+                                        class="form-control-success form-control" readonly>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label for="txtEditEmail" class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Email</label>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-12 pr-0 mr-0">
+                                    <input type="text" id="txtEditEmail" name="txtEditEmail"
+                                        class="form-control-success form-control" readonly>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <div class="col-12 pr-0 py-2">
+                                <label class=" form-control-label mb-0" style="font-weight: bold;">
+                                    Office/ Residential Address</label>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mx-auto mb-3 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+
+                            </div>
+                            <div class="col-12 col-sm-9">
+                                <p id="Editaddress"></p>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label class="form-control-label mb-0" style="font-weight: bold;">
+                                    Client Type</label>
+                            </div>
+                            <div class="col-12 col-sm-9 ">
+                                <div class=" d-flex">
+                                    <div>
+                                        <input type="checkbox" name="chkUserType" id="chkEditIndustrial">
+                                        <label for="chkEditIndustrial">Industrial</label>
+                                    </div>
+                                    <div class="pl-3">
+                                        <input type="checkbox" name="chkUserType" id="chkEditNonIndustrial">
+                                        <label for="chkEditNonIndustrial">Non Industrial</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto my-2 d-sm-flex">
+                            <div class="col-12 col-sm-3 pr-0">
+                                <label for="txtEditADL" class=" form-control-label mb-0" style="font-weight:bold ;">
+                                    Average Daily Load (ADL)</label>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-12 col-sm-4">
+                                    <input type="text" id="txtEditADL" name="txtEditADL"
+                                        class="form-control-success form-control client-update-required">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-12 mx-auto d-flex">
+                            <div class="col-3 pr-0">
+                                <label class=" form-control-label mb-0" style="font-weight:bold ;">
+                                    Status</label>
+                            </div>
+                            <div class="col-9 ">
+                                <div class=" d-flex">
+                                    <div>
+                                        <input type="radio" name="chkStatus" id="chkEditActive">
+                                        <label for="chkEditActive">Active</label>
+                                    </div>
+                                    <div class="pl-3">
+                                        <input type="radio" name="chkStatus" id="chkEditBlocked">
+                                        <label for="chkEditBlocked">Blocked</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+
+                            </div>
+                        </div>
+                        <div class="col-12 mx-auto d-none" id="divUpdateItems">
+                            <label style="font-weight: bold;">Items </label>
+                            <div class="col-12 py-2 d-flex justify-content-end">
+                                <div>
+                                    <button class="btn btn-success px-4" type="button" data-toggle="modal"
+                                        data-target="#btnSecondaryItemAddModal" id="btnAddNewItems">Add</button>
+                                </div>
+                            </div>
+                            <div class="table-responsive ">
+                                <table id="tblUpdateItems" class="table table-data3 table-borderless">
+                                    <thead>
+                                        <tr>
+                                            <th class="border border-top-0 border-bottom-0">
+                                                Description</th>
+                                            <th class="border border-top-0 border-bottom-0">
+                                                Manual Costing</th>
+                                            <th class="border border-top-0 border-bottom-0 text-center">
+                                                Cost With ADL</th>
+                                            <th>Cost Without ADL</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tblUpdateIndustrialItems">
+
+                                    </tbody>
+                                </table>
+                                <div class="col-12 my-4">
+                                    <p class="font-italic text-center d-none" id="emptyUpdatedLaundryItems">No Record
+                                        Found</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 mx-auto my-2 d-flex">
+                            <div class="col-8 pr-0">
+
+                            </div>
+                            <div class="col-4">
+                                <button type="button" data-toggle="modal" name="btnSubmitUpdatedClient"
+                                    id="btnSubmitUpdatedClient" class="btn btn-success col-12">
+                                    Update
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--SELECT USER-->
+    <div class="modal fade" id="btnClientList" tabindex="-1" role="dialog" aria-labelledby="btnClientListLabel"
+        aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="header">
+                        <h4>Search Client</h4>
+                    </div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseClientList">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="py-2 col-12 col-sm-8 d-lg-flex align-items-center">
+                        <label for="selClientSearchQuery" class="my-0">Search by:&nbsp;</label>
+                        <select id="selClientSearchQuery" name="selClientSearchQuery"
+                            class="form-control-success form-control col-12 col-lg-5">
+                            <option value="c_name">Customer Name</option>
+                            <option value="c_num">Cellular Number</option>
+                            <option value="c_em">Email Address</option>
+                        </select>
+
+
+                    </div>
+                    <div class="d-flex justify-content-between py-2 col-12 col-sm-8">
+                        <input id="txtSearchClient" name="txtSearchClient" type="text" class="form-control col-10"
+                            autocomplete="off" placeholder="Search">
+                        <button type="button" class="btn btn-primary" id="btnSearchClient" name="btnSearchClient">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+
+                    <div class="table-responsive m-b-40 ">
+                        <table id="tblSearchCustomer" class="table table-borderless table-striped table-earning m-t-20">
+                            <thead>
+                                <tr>
+                                    <th class="border border-top-0 border-bottom-0">Client Name
+                                    </th>
+                                    <th class="border border-top-0 border-bottom-0">
+                                        Cellular Number</th>
+                                    <th class="border border-top-0 border-bottom-0 border-right-0 text-center">
+                                        Email</th>
+                                </tr>
+                            </thead>
+                            <tbody id="btnCustomerList">
+
+                            </tbody>
+                        </table>
+                        <div class="col-12 my-4">
+                            <p class="font-italic text-center d-none" id="emptyCustomerList">No Record Found</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--CHANGE PASSWORD-->
+    <div class="modal fade" id="btnUpdatePassword" tabindex="-1" role="dialog" aria-labelledby="btnUpdatePasswordLabel"
+        aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                            id="divInvalidPasswordForm">
+                            <span class="badge badge-pill badge-danger">Failed </span>
+                            &nbsp; <br> There are <span class="text-danger">required</span> fields left empty.
+                            Please
+                            check
+                            and submit again.
+                        </div>
+                        <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                            id="divChangePasswordNotMatch">
+                            <span class="badge badge-pill badge-danger">Failed </span>
+                            &nbsp; <br>Password didn't match. Please check and try again.
+                        </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            id="btnClosePassword">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <input type="hidden" name="userId" id="userId">
+                    <div class="col-12 mx-auto my-2">
+                        <div class="col-12 pr-0">
+                            <label for="txtChangePassword1" class=" form-control-label mb-0">
+                                Password</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="password" id="txtChangePassword1" name="txtChangePassword1"
+                                class="form-control-success form-control password-required" required>
+                        </div>
+                    </div>
+                    <div class="col-12 mx-auto my-2">
+                        <div class="col-12 pr-0">
+                            <label for="txtChangePassword2" class=" form-control-label mb-0">
+                                Re enter password</label>
+                        </div>
+                        <div class="col-12">
+                            <input type="password" id="txtChangePassword2" name="txtChangePassword2"
+                                class="form-control-success form-control password-required" required>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-8 mt-2">
+                            <button type="button" class="btn btn-primary col-5" data-toggle="modal"
+                                id="btnSubmitUpdatedPassword">
+                                Update
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnLogoutModal" tabindex="-1" role="dialog" aria-labelledby="btnLogoutModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseLogout">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">Are you sure you want to <span class="text-danger">logout</span> ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" data-toggle="modal"
+                            data-target="#btnConfirmLogout" id="btnLogoutConfirm">
+                            Yes
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnLogoutCancel">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="btnConfirmLogout" tabindex="-1" role="dialog" aria-labelledby="btnConfirmLogoutLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseLogoutTwo">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">Confirm to <span class="text-danger">logout</span> ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnLogoutConfirmTwo">
+                            Confirm
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnLogoutCancelTwo">
+                            Cancel
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CONFIRM 1-->
+    <div class="modal fade" id="btnConfirm1" tabindex="-1" role="dialog" aria-labelledby="btnConfirm1Label"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseConfirm1">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">Are you sure you want to <span class="text-success" id="method"></span>
+                            customer
+                            ?
+                        </p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnConfirmSuccessOne"
+                            data-toggle="modal" data-target="#btnConfirm2Modal">
+                            Yes
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelOne">
+                            No
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Confirm 2-->
+    <div class="modal fade" id="btnConfirm2Modal" tabindex="-1" role="dialog" aria-labelledby="btnConfirm2ModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                            id="btnCloseConfimrTwo">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-2">
+                        <div>
+                            <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                        </div>
+                        <p class="px-2">Confirm to <span id="confirmTwoMethod"></span> customer ?</p>
+                    </div>
+                    <div class=" row d-flex justify-content-around p-3">
+                        <button type="button" class="btn btn-danger col-4 py-2" id="btnConfirmTwo" data-toggle="modal">
+                            Confirm
+                        </button>
+                        <button type="button" class="btn btn-primary col-4 py-2" id="btnCancelTwo">
+                            Cancel
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!--SUCCESS-->
+    <div class="modal fade" id="btnSuccessEntryModal" tabindex="-1" role="dialog"
+        aria-labelledby="btnSuccessEntryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" class="close" hidden data-dismiss="modal" aria-label="Close"
+                            id="btnCloseSuccessAlert">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-3 align-items-center">
+                        <div class="col-3">
+                            <i class="fas fa-check-circle fa-4x text-success"></i>
+                        </div>
+                        <p id="successMessage" class="px-2">Customer <span id="prefix"></span> has been <span
+                                id="successServiceMethod" class="text-success"></span>
+                            successfully</span></p>
+                    </div>
+                    <div class=" row d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-6 mt-2">
+                            <button type="button" class="btn btn-primary col-5" id="btnCloseSuccessEntry">
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ITEM SUCCESS-->
+    <div class="modal fade" id="btnCustomSuccessEntryModal" tabindex="-1" role="dialog"
+        aria-labelledby="btnCustomSuccessEntryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" class="close" hidden data-dismiss="modal" aria-label="Close"
+                            id="btnCustomCloseSuccessAlert">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-3 align-items-center">
+                        <div class="col-3">
+                            <i class="fas fa-check-circle fa-4x text-success"></i>
+                        </div>
+                        <p id="successMessage" class="px-2">Item <span id="prefix"></span> has been <span
+                                id="CustomsuccessServiceMethod" class="text-success"></span>
+                            successfully</span></p>
+                    </div>
+                    <div class=" row d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-6 mt-2">
+                            <button type="button" class="btn btn-primary col-5" id="btnCustomCloseSuccessEntry">
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CUSTOM SUCCESS-->
+    <div class="modal fade" id="btnCustomSuccessEntryModal" tabindex="-1" role="dialog"
+        aria-labelledby="btnCustomSuccessEntryModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" class="close" hidden data-dismiss="modal" aria-label="Close"
+                            id="btnCloseCustomSuccessAlert">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-3 align-items-center">
+                        <div class="col-3">
+                            <i class="fas fa-check-circle fa-4x text-success"></i>
+                        </div>
+                        <p id="successCustomMessage" class="px-2">Customer <span id="Customprefix"></span> has been
+                            <span id="successCustomServiceMethod" class="text-success"></span>
+                            successfully</span></p>
+                    </div>
+                    <div class=" row d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-6 mt-2">
+                            <button type="button" class="btn btn-primary col-5" id="btnCloseCustomSuccessEntry">
+                                OK
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--FAILED-->
+    <div class="modal fade" id="btnFailedModal" tabindex="-1" role="dialog" aria-labelledby="btnFailedModalLabel"
+        data-backdrop="static">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="modal-header">
+                        <button type="button" hidden class="close" data-dismiss="modal" aria-label="Close"
+                            id="btnCloseFailedEntry">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="d-flex my-3 align-items-center">
+                        <div class="col-3">
+                            <i class="fas fa-times-circle fa-4x text-danger"></i>
+                        </div>
+                        <p id="failedMessage" class="px-2">Failed to <span class="text-danger" id="failedMethod"></span>
+                            record. Please
+                            contact
+                            administrator</p>
+                    </div>
+                    <div class=" row d-flex justify-content-between text-right p-3">
+                        <div>
+
+                        </div>
+                        <div class="col-6 mt-5">
+                            <button type="button" class="btn btn-primary col-5" id="btnCloseFailedAlert">
+                                OK
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--SECONDARY ADD ITEMS-->
+    <div class="modal fade" id="btnSecondaryItemAddModal" tabindex="-1" role="dialog" aria-labelledby="btnSecondaryItemAddModalLabel"
+        aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                    id="divSecondaryInvalidForm">
+                    <span class="badge badge-pill badge-danger">Failed </span>
+                    &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                    check
+                    and submit again.
+                </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnSecondaryClosebtnItemAddModal">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="row">
+                            <input type="hidden" name="secondaryCustomerId" id="secondaryCustomerId">
+                            <div class="col-12 mx-auto my-2 d-sm-flex">
+                                <div class="col-3 pr-0">
+                                    <label for="selSecondaryLaundryItemCategory" class=" form-control-label mb-0">
+                                        Category</label>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    <select id="selSecondaryLaundryItemCategory" name="selSecondaryLaundryItemCategory"
+                                        class="form-control item-secondary-required">
+
+                                    </select>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex align-items-center">
+                                <div class="col-1 pr-0">
+                                    <input type="checkbox" id="chkSecondaryManualCosting" name="chkSecondaryManualCosting" disabled
+                                        class="form-control-success form-control col-12">
+                                </div>
+                                <div class="col-9 px-2">
+                                    <label for="chkSecondaryManualCosting" class=" form-control-label mb-0">
+                                        Manual Costing</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-7 pr-0">
+                                    <label for="txtSecondaryUnitCostWithADL" class=" form-control-label mb-0">
+                                        Unit Cost with ADL</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="txtSecondaryUnitCostWithADL" name="txtSecondaryUnitCostWithADL"
+                                        class="form-control-success form-control amount-check item-secondary-required">
+                                </div>
+
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-7 pr-0">
+                                    <label for="txtSecondaryUnitCostWithoutADL" class=" form-control-label mb-0">
+                                        Unit Cost without ADL</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="txtSecondaryUnitCostWithoutADL" name="txtSecondaryUnitCostWithoutADL"
+                                        class="form-control-success form-control amount-check item-secondary-required">
+                                </div>
+
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-8 pr-0">
+
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" data-toggle="modal" name="btnAddItems" id="btnSedondaryAddItems"
+                                        class="btn btn-success col-12">
+                                        Submit
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--EDIT ITEMS-->
+    <div class="modal fade" id="btnEditItemAddModal" tabindex="-1" role="dialog" aria-labelledby="btnEditItemAddModalLabel"
+        aria-hidden="true" style="position: fixed; overflow-y: auto;">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="sufee-alert alert with-close alert-danger alert-dismissible fade show d-none px-2"
+                    id="divEditInvalidForm">
+                    <span class="badge badge-pill badge-danger">Failed </span>
+                    &nbsp; <br> There are <span class="text-danger">required</span> fields left empty. Please
+                    check
+                    and submit again.
+                </div>
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                        id="btnEditClosebtnItemAddModal">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <div class="row">
+                            <input type="hidden" name="EditCustomerId" id="EditCustomerId">
+                            <div class="col-12 mx-auto my-2 d-sm-flex">
+                                <div class="col-3 pr-0">
+                                    <label for="selEditLaundryItemCategory" class=" form-control-label mb-0">
+                                        Category</label>
+                                </div>
+                                <div class="col-12 col-sm-9">
+                                    <select id="selEditLaundryItemCategory" name="selEditLaundryItemCategory" disabled
+                                        class="form-control item-edit-required">
+
+                                    </select>
+                                </div>
+                                <div>
+                                </div>
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex align-items-center">
+                                <div class="col-1 pr-0">
+                                    <input type="checkbox" id="chkEditManualCosting" name="chkEditManualCosting" disabled
+                                        class="form-control-success form-control col-12">
+                                </div>
+                                <div class="col-9 px-2">
+                                    <label for="chkEditManualCosting" class=" form-control-label mb-0">
+                                        Manual Costing</label>
+                                </div>
+                            </div>
+
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-7 pr-0">
+                                    <label for="txtEditUnitCostWithADL" class=" form-control-label mb-0">
+                                        Unit Cost with ADL</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="txtEditUnitCostWithADL" name="txtEditUnitCostWithADL"
+                                        class="form-control-success form-control amount-check item-edit-required">
+                                </div>
+
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex justify-content-between">
+                                <div class="col-7 pr-0">
+                                    <label for="txtEditUnitCostWithoutADL" class=" form-control-label mb-0">
+                                        Unit Cost without ADL</label>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" id="txtEditUnitCostWithoutADL" name="txtEditUnitCostWithoutADL"
+                                        class="form-control-success form-control amount-check item-edit-required">
+                                </div>
+
+                            </div>
+                            <div class="col-12 mx-auto my-2 d-flex">
+                                <div class="col-8 pr-0">
+
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" data-toggle="modal" name="btnAddItems" id="btnEditAddItems"
+                                        class="btn btn-success col-12">
+                                        Update
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--custom confirm-->
+
+<div class="modal fade" id="btnCustomConfirm1" tabindex="-1" role="dialog" aria-labelledby="btnConfirm1Label"
+aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnCloseCustomConfirm1">
+                <span aria-hidden="true">×</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="d-flex my-2">
+                <div>
+                    <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                </div>
+                <p class="px-2">Are you sure you want to <span class="text-success" id="CustomMethod"></span>
+                    item
+                    ?
+                </p>
+            </div>
+            <div class=" row d-flex justify-content-around p-3">
+                <button type="button" class="btn btn-danger col-4 py-2" id="btnCustomConfirmSuccessOne"
+                    data-toggle="modal" data-target="#btnCustomConfirm2Modal">
+                    Yes
+                </button>
+                <button type="button" class="btn btn-primary col-4 py-2" id="btnCustomCancelOne">
+                    No
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<!--custom Confirm 2-->
+<div class="modal fade" id="btnCustomConfirm2Modal" tabindex="-1" role="dialog" aria-labelledby="btnConfirm2ModalLabel"
+aria-hidden="true">
+<div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+        <div class="modal-body">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"
+                    id="btnCustomCloseConfimrTwo">
+                    <span aria-hidden="true">×</span>
+                </button>
+            </div>
+            <div class="d-flex my-2">
+                <div>
+                    <i class="fas fa-warning text-warning fa-3x mr-3"></i>
+                </div>
+                <p class="px-2">Confirm to <span id="CustomConfirmTwoMethod"></span> item ?</p>
+            </div>
+            <div class=" row d-flex justify-content-around p-3">
+                <button type="button" class="btn btn-danger col-4 py-2" id="btnCustomConfirmTwo" data-toggle="modal">
+                    Confirm
+                </button>
+                <button type="button" class="btn btn-primary col-4 py-2" id="btnCustomCancelTwo">
+                    Cancel
+                </button>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+
+    <!--END OF MODALS-->
+
+    <!--BOOTSTRAP JS FILES -->
+    <!-- Jquery JS-->
+    <script src="js/master-utility.js"></script>
+    <script src="js/header.js"></script>
+    <script src="vendor/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap JS-->
+    <script src="vendor/bootstrap-4.1/popper.min.js"></script>
+    <script src="vendor/bootstrap-4.1/bootstrap.min.js"></script>
+    <!-- Vendor JS       -->
+    <script src="vendor/slick/slick.min.js">
+    </script>
+    <script src="vendor/wow/wow.min.js"></script>
+    <script src="vendor/animsition/animsition.min.js"></script>
+    <script src="vendor/bootstrap-progressbar/bootstrap-progressbar.min.js">
+    </script>
+    <script src="vendor/counter-up/jquery.waypoints.min.js"></script>
+    <script src="vendor/counter-up/jquery.counterup.min.js">
+    </script>
+    <script src="vendor/circle-progress/circle-progress.min.js"></script>
+    <script src="vendor/perfect-scrollbar/perfect-scrollbar.js"></script>
+    <script src="vendor/chartjs/Chart.bundle.min.js"></script>
+    <script src="vendor/select2/select2.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/logout.js"></script>
+    <script src="js/admin/admin-customer-info-tagging.js"></script>
+    <script src="js/admin/user-profle.js"></script>
+
+
+    <!--END OF BOOTSTRAP JS FILES -->
+</body>
+
+</html>
+<!-- end document-->
