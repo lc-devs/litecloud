@@ -1,0 +1,171 @@
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE nonperson_id = 1' at line 1
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.NextResultAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 89
+   at MySqlConnector.MySqlDataReader.DisposeAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 609
+   at MySqlConnector.MySqlDataReader.Dispose(Boolean disposing) in /_/src/MySqlConnector/MySqlDataReader.cs:line 436
+   at System.Data.Common.DbDataReader.Dispose()
+   at inventory.Methods.Entities_NonPersonMethods.GetNonPersonDetails(Int64 nonPersonId) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Entities_NonPersonMethods.cs:line 181
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE person_id = 1' at line 1
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.NextResultAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 89
+   at MySqlConnector.MySqlDataReader.DisposeAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 609
+   at MySqlConnector.MySqlDataReader.Dispose(Boolean disposing) in /_/src/MySqlConnector/MySqlDataReader.cs:line 436
+   at System.Data.Common.DbDataReader.Dispose()
+   at inventory.Methods.Entities_PersonMethods.GetPersonDetails(Int64 personId)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE person_id = 1' at line 1
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.NextResultAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 89
+   at MySqlConnector.MySqlDataReader.DisposeAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 609
+   at MySqlConnector.MySqlDataReader.Dispose(Boolean disposing) in /_/src/MySqlConnector/MySqlDataReader.cs:line 436
+   at System.Data.Common.DbDataReader.Dispose()
+   at inventory.Methods.Entities_PersonMethods.GetPersonDetails(Int64 personId)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE person_id = 1' at line 1
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.NextResultAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 89
+   at MySqlConnector.MySqlDataReader.DisposeAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 609
+   at MySqlConnector.MySqlDataReader.Dispose(Boolean disposing) in /_/src/MySqlConnector/MySqlDataReader.cs:line 436
+   at System.Data.Common.DbDataReader.Dispose()
+   at inventory.Methods.Entities_PersonMethods.GetPersonDetails(Int64 personId)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'WHERE person_id = 1' at line 1
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.NextResultAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 89
+   at MySqlConnector.MySqlDataReader.DisposeAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 609
+   at MySqlConnector.MySqlDataReader.Dispose(Boolean disposing) in /_/src/MySqlConnector/MySqlDataReader.cs:line 436
+   at System.Data.Common.DbDataReader.Dispose()
+   at inventory.Methods.Entities_PersonMethods.GetPersonDetails(Int64 personId) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Entities_PersonMethods.cs:line 301
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Parameter '@person_lastname' must be defined. To use this as a variable, set 'Allow User Variables=true' in the connection string.
+   at MySqlConnector.Core.StatementPreparer.GetParameterIndex(String name) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 45
+   at MySqlConnector.Core.StatementPreparer.ParameterSqlParser.OnNamedParameter(Int32 index, Int32 length) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 71
+   at MySqlConnector.Core.SqlParser.Parse(String sql) in /_/src/MySqlConnector/Core/SqlParser.cs:line 199
+   at MySqlConnector.Core.StatementPreparer.ParseAndBindParameters(ByteBufferWriter writer) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 35
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteCommand(IMySqlCommand command, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 261
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryPayload(IMySqlCommand command, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 75
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryCommand(CommandListPosition& commandListPosition, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 47
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 45
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_PersonMethods.SavePerson(Entities_PersonModel person)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Unknown column 'person_lastname' in 'field list'
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 958
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_PersonMethods.SavePerson(Entities_PersonModel person)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Data too long for column 'zip_code' at row 1
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 958
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_PersonMethods.SavePerson(Entities_PersonModel person)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Table 'entities.person' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_PersonMethods.UpdatePerson(Entities_PersonModel person)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Table 'entities.person' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_PersonMethods.DeletePerson(Int32 person_id)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Table 'entities.person' doesn't exist
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_PersonMethods.DeletePerson(Int32 person_id)
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Parameter '@zip_code' must be defined. To use this as a variable, set 'Allow User Variables=true' in the connection string.
+   at MySqlConnector.Core.StatementPreparer.GetParameterIndex(String name) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 45
+   at MySqlConnector.Core.StatementPreparer.ParameterSqlParser.OnNamedParameter(Int32 index, Int32 length) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 71
+   at MySqlConnector.Core.SqlParser.Parse(String sql) in /_/src/MySqlConnector/Core/SqlParser.cs:line 199
+   at MySqlConnector.Core.StatementPreparer.ParseAndBindParameters(ByteBufferWriter writer) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 35
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteCommand(IMySqlCommand command, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 261
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryPayload(IMySqlCommand command, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 75
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryCommand(CommandListPosition& commandListPosition, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 47
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 45
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_NonPersonMethods.SaveNonPerson(Entities_NonPersonModel nonperson) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Entities_NonPersonMethods.cs:line 87
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`entities`.`non_persons`, CONSTRAINT `non_persons_to_persons_contact1` FOREIGN KEY (`contact_person_id1`) REFERENCES `persons` (`person_id`) ON DELETE NO ACTION ON UPDATE NO ACTION)
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_NonPersonMethods.SaveNonPerson(Entities_NonPersonModel nonperson) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Entities_NonPersonMethods.cs:line 88
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Parameter '@zip_code' must be defined. To use this as a variable, set 'Allow User Variables=true' in the connection string.
+   at MySqlConnector.Core.StatementPreparer.GetParameterIndex(String name) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 45
+   at MySqlConnector.Core.StatementPreparer.ParameterSqlParser.OnNamedParameter(Int32 index, Int32 length) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 71
+   at MySqlConnector.Core.SqlParser.Parse(String sql) in /_/src/MySqlConnector/Core/SqlParser.cs:line 199
+   at MySqlConnector.Core.StatementPreparer.ParseAndBindParameters(ByteBufferWriter writer) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 35
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteCommand(IMySqlCommand command, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 261
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryPayload(IMySqlCommand command, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 75
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryCommand(CommandListPosition& commandListPosition, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 47
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 45
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_NonPersonMethods.UpdateNonPerson(Entities_NonPersonModel nonperson) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Entities_NonPersonMethods.cs:line 253
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Parameter '@zip_code' must be defined. To use this as a variable, set 'Allow User Variables=true' in the connection string.
+   at MySqlConnector.Core.StatementPreparer.GetParameterIndex(String name) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 45
+   at MySqlConnector.Core.StatementPreparer.ParameterSqlParser.OnNamedParameter(Int32 index, Int32 length) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 71
+   at MySqlConnector.Core.SqlParser.Parse(String sql) in /_/src/MySqlConnector/Core/SqlParser.cs:line 199
+   at MySqlConnector.Core.StatementPreparer.ParseAndBindParameters(ByteBufferWriter writer) in /_/src/MySqlConnector/Core/StatementPreparer.cs:line 35
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteCommand(IMySqlCommand command, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 261
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryPayload(IMySqlCommand command, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 75
+   at MySqlConnector.Core.SingleCommandPayloadCreator.WriteQueryCommand(CommandListPosition& commandListPosition, IDictionary`2 cachedProcedures, ByteBufferWriter writer, Boolean appendSemicolon) in /_/src/MySqlConnector/Core/SingleCommandPayloadCreator.cs:line 47
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 45
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_NonPersonMethods.UpdateNonPerson(Entities_NonPersonModel nonperson) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Entities_NonPersonMethods.cs:line 253
+
+Date Time:2022-09-09 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Field 'country_id' doesn't have a default value
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 958
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Entities_ProvinceStateMethods.SaveProvinceState(Entities_ProvinceStateModel provincestate) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Entities_ProvinceStateMethods.cs:line 45
+

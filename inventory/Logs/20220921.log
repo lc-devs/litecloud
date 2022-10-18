@@ -1,0 +1,46 @@
+Date Time:2022-09-21 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Connect Timeout expired.
+ ---> MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int32 startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 437
+   at MySqlConnector.Core.ConnectionPool.ConnectSessionAsync(MySqlConnection connection, String logMessage, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 367
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 94
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 124
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 919
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 941
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 410
+   at inventory.Controllers.Inventory_ModelsMethodsController.GetByDescription(String description, Type type, String UserKey) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Controllers\Inventory_ModelsMethodsController.cs:line 68
+
+Date Time:2022-09-21 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int32 startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 437
+   at MySqlConnector.Core.ConnectionPool.ConnectSessionAsync(MySqlConnection connection, String logMessage, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 367
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 94
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 124
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 919
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 410
+   at inventory.Controllers.Inventory_ModelsMethodsController.GetByDescription(String description, Type type, String UserKey) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Controllers\Inventory_ModelsMethodsController.cs:line 68
+
+Date Time:2022-09-21 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Unable to connect to any of the specified MySQL hosts.
+   at MySqlConnector.Core.ServerSession.ConnectAsync(ConnectionSettings cs, MySqlConnection connection, Int32 startTickCount, ILoadBalancer loadBalancer, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ServerSession.cs:line 437
+   at MySqlConnector.Core.ConnectionPool.ConnectSessionAsync(MySqlConnection connection, String logMessage, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 367
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 94
+   at MySqlConnector.Core.ConnectionPool.GetSessionAsync(MySqlConnection connection, Int32 startTickCount, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/ConnectionPool.cs:line 124
+   at MySqlConnector.MySqlConnection.CreateSessionAsync(ConnectionPool pool, Int32 startTickCount, Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 919
+   at MySqlConnector.MySqlConnection.OpenAsync(Nullable`1 ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlConnection.cs:line 410
+   at inventory.Controllers.Inventory_ModelsMethodsController.GetByDescription(String description, Type type, String UserKey) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Controllers\Inventory_ModelsMethodsController.cs:line 68
+
+Date Time:2022-09-21 12:00:00 am
+Log:System.IndexOutOfRangeException: The column name '`item_category_id`' does not exist in the result set.
+   at MySqlConnector.Core.ResultSet.GetOrdinal(String name) in /_/src/MySqlConnector/Core/ResultSet.cs:line 351
+   at MySqlConnector.MySqlDataReader.GetOrdinal(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 216
+   at MySqlConnector.MySqlDataReader.GetInt32(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 243
+   at inventory.Methods.Inventory_ModelsMethods.GetByDescription(String description) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_ModelsMethods.cs:line 154
+
+Date Time:2022-09-21 12:00:00 am
+Log:System.IndexOutOfRangeException: The column name '`item_category_id`' does not exist in the result set.
+   at MySqlConnector.Core.ResultSet.GetOrdinal(String name) in /_/src/MySqlConnector/Core/ResultSet.cs:line 351
+   at MySqlConnector.MySqlDataReader.GetOrdinal(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 216
+   at MySqlConnector.MySqlDataReader.GetInt32(String name) in /_/src/MySqlConnector/MySqlDataReader.cs:line 243
+   at inventory.Methods.Inventory_ModelsMethods.GetByDescription(String description) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_ModelsMethods.cs:line 154
+

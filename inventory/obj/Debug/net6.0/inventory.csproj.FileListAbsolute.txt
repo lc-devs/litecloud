@@ -1,0 +1,7 @@
+C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\obj\Debug\net6.0\inventory.csproj.AssemblyReference.cache
+C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\obj\Debug\net6.0\inventory.GeneratedMSBuildEditorConfig.editorconfig
+C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\obj\Debug\net6.0\inventory.AssemblyInfoInputs.cache
+C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\obj\Debug\net6.0\inventory.AssemblyInfo.cs
+C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\obj\Debug\net6.0\inventory.csproj.CoreCompileInputs.cache
+C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\obj\Debug\net6.0\inventory.MvcApplicationPartsAssemblyInfo.cs
+C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\obj\Debug\net6.0\inventory.MvcApplicationPartsAssemblyInfo.cache

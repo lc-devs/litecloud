@@ -1,0 +1,93 @@
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 132
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 132
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 132
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 132
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:System.NullReferenceException: Object reference not set to an instance of an object.
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 150
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 129
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 132
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 132
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
+Date Time:2022-10-08 12:00:00 am
+Log:MySqlConnector.MySqlException (0x80004005): Cannot add or update a child row: a foreign key constraint fails (`inventory`.`units_locations`, CONSTRAINT `u_l_entities_persons` FOREIGN KEY (`person_incharge`) REFERENCES `entities`.`persons` (`person_id`))
+   at MySqlConnector.Core.ServerSession.ReceiveReplyAsyncAwaited(ValueTask`1 task) in /_/src/MySqlConnector/Core/ServerSession.cs:line 960
+   at MySqlConnector.Core.ResultSet.ReadResultSetHeaderAsync(IOBehavior ioBehavior) in /_/src/MySqlConnector/Core/ResultSet.cs:line 43
+   at MySqlConnector.MySqlDataReader.ActivateResultSet(CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 132
+   at MySqlConnector.MySqlDataReader.CreateAsync(CommandListPosition commandListPosition, ICommandPayloadCreator payloadCreator, IDictionary`2 cachedProcedures, IMySqlCommand command, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlDataReader.cs:line 465
+   at MySqlConnector.Core.CommandExecutor.ExecuteReaderAsync(IReadOnlyList`1 commands, ICommandPayloadCreator payloadCreator, CommandBehavior behavior, Activity activity, IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/Core/CommandExecutor.cs:line 56
+   at MySqlConnector.MySqlCommand.ExecuteNonQueryAsync(IOBehavior ioBehavior, CancellationToken cancellationToken) in /_/src/MySqlConnector/MySqlCommand.cs:line 296
+   at inventory.Methods.Inventory_InventoryUnitLocationMethods.Save(Inventory_InventoryUnitLocationModel unitlocation) in C:\001 Projects\LiteCloud\POS\pos-and-sales\inventory\Methods\Inventory_InventoryUnitLocationMethods.cs:line 167
+
